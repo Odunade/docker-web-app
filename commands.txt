@@ -1,10 +1,10 @@
-docker build -t miltonc/dockerwebapp .
+docker build -t odunade/dockerwebapp .
 
 docker images
 
-docker run -p 49160:8080 miltonc/dockerwebapp
+docker run -p 49160:8080 odunade/dockerwebapp
 
-http://localhost:49160
+http://localhost:8080
 
 
 Issue: Cannot run program - nohup
