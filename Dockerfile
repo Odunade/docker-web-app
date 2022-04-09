@@ -1,10 +1,8 @@
-FROM node:13-alpine
+FROM openjdk:8-jre-alpine
 
-ENV MONGO_DB_USERNAME=admin \
-    MONGO_DB_PWD=password 
+EXPOSE 8080
 
-RUN mkdir -p /home/app
+COPY ./target/java-maven-app-*.jar /usr/app/
+WORKDIR /usr/app
 
-COPY . /home/app
-
-CMD ["node", "/home/app/server.js"]
+CMD java -jar java-maven-app-*.jar
